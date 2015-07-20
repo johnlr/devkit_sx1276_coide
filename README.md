@@ -46,15 +46,3 @@ http://www.st.com/web/en/catalog/tools/FM147/CL1794/SC961/SS1533/PF257916
 
 5) Click "Upgrade" button, and upgrade firmware. Do NOT use th "Upload" button in "Upload Action" section, this
    is to download the current firmware on the device!  
-
--- 
-Regards, David
-
-=========================================
-Modtronix Engineering
-Sydney, Australia
-Tel: +61 (0)405 353466
-Fax: +61 (0)2 82094824
-Email: david05@modtronix.com
-Web: www.modtronix.com
-ABN: 48663118043
