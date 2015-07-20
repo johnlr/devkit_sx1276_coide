@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project version="2G - 2.0.3" name="devkit_sx1276_coide">
+  <Target name="Default" isCurrent="1">
+    <Device manufacturerId="9" manufacturerName="ST" chipId="857" chipName="STM32L151RCT6" boardId="" boardName="" boardUrl="" coreId="" coreName=""/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="4"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value="-fno-common; -fmessage-length=0; -Wall; -fno-strict-aliasing; -fno-rtti; -fno-exceptions; -ffunction-sections; -fdata-sections; -std=gnu++98"/>
+        <Option name="FPU" value="1"/>
+        <Option name="SupportCPlusplus" value="1"/>
+        <Option name="DEBUG" value="2"/>
+        <Option name="WARNING" value="1"/>
+        <Includepaths>
+          <Includepath path="."/>
+          <Includepath path="SX1276Lib_modtronix"/>
+          <Includepath path="SX1276Lib_modtronix/sx1276"/>
+          <Includepath path="SX1276Lib_modtronix/enums"/>
+          <Includepath path="SX1276Lib_modtronix/registers"/>
+          <Includepath path="SX1276Lib_modtronix/typedefs"/>
+          <Includepath path="SX1276Lib_modtronix/radio"/>
+          <Includepath path="SX1276Lib_modtronix/debug"/>
+          <Includepath path="mbed-nz32st1l"/>
+          <Includepath path="mbed-nz32st1l/targets"/>
+          <Includepath path="mbed-nz32st1l/targets/cmsis"/>
+          <Includepath path="mbed-nz32st1l/targets/cmsis/TARGET_STM"/>
+          <Includepath path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1"/>
+          <Includepath path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/TARGET_NZ32ST1L"/>
+          <Includepath path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/TARGET_NZ32ST1L/TOOLCHAIN_GCC_ARM"/>
+          <Includepath path="mbed-nz32st1l/targets/hal"/>
+          <Includepath path="mbed-nz32st1l/targets/hal/TARGET_STM"/>
+          <Includepath path="mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L"/>
+          <Includepath path="mbed-nz32st1l/common"/>
+          <Includepath path="mbed-nz32st1l/api"/>
+          <Includepath path="mbed-nz32st1l/hal"/>
+        </Includepaths>
+        <DefinedSymbols>
+          <Define name="TARGET_NZ32ST1L"/>
+          <Define name="TARGET_M3"/>
+          <Define name="TARGET_CORTEX_M"/>
+          <Define name="TARGET_STM"/>
+          <Define name="TARGET_STM32L1"/>
+          <Define name="TARGET_STM32L152RE"/>
+          <Define name="TOOLCHAIN_GCC_ARM"/>
+          <Define name="TOOLCHAIN_GCC"/>
+          <Define name="__CORTEX_M3"/>
+          <Define name="ARM_MATH_CM3"/>
+          <Define name="MBED_BUILD_TIMESTAMP=1423704949.72"/>
+          <Define name="__MBED__=1"/>
+          <Define name="TARGET_FF_ARDUINO"/>
+          <Define name="TARGET_FF_MORPHO"/>
+        </DefinedSymbols>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="1"/>
+        <Option name="UserEditLinkder" value=""/>
+        <Option name="UseMemoryLayout" value="0"/>
+        <Option name="LTO" value="0"/>
+        <Option name="IsNewStartupCode" value="1"/>
+        <Option name="Library" value="Not use C Library"/>
+        <Option name="nostartfiles" value="0"/>
+        <Option name="UserEditLinker" value="-Wl,--wrap,main; --specs=nano.specs; -u _printf_float; -u _scanf_float;  "/>
+        <LinkedLibraries>
+          <Libset dir="" libs="stdc++"/>
+          <Libset dir="" libs="supc++"/>
+          <Libset dir="" libs="m"/>
+          <Libset dir="" libs="gcc"/>
+          <Libset dir="" libs="c"/>
+          <Libset dir="" libs="nosys"/>
+        </LinkedLibraries>
+        <MemoryAreas debugInFlashNotRAM="1">
+          <Memory name="IROM1" type="ReadOnly" size="0x00080000" startValue="0x08000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x00013EC4" startValue="0x2000013C"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
+        </MemoryAreas>
+        <LocateLinkFile path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/TARGET_NZ32ST1L/TOOLCHAIN_GCC_ARM/STM32L151XC.ld" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="./"/>
+        <Option name="Name" value="NZ32ST1L_sx1276_pingpong"/>
+        <Option name="HEX" value="1"/>
+        <Option name="BIN" value="1"/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="0" value=""/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="ST-Link"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="SWD"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="1M"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="SYSRESETREQ"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2009"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="C:\Users\David\AppData\Roaming\CooCox\CoIDE\config\flash\CooCox-Flash\CoIDE_STM32L1xx_256K\STM32L1xx_256.elf"/>
+    </DebugOption>
+    <ExcludeFile/>
+  </Target>
+  <Components path="./"/>
+  <LocalComponents/>
+  <Files>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_comp.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_comp.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_tim.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_tim.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_spi_ex.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_spi_ex.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/objects.h" path="mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/objects.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/DigitalOut.h" path="mbed-nz32st1l/api/DigitalOut.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_adc_ex.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_adc_ex.h" type="1"/>
+    <File name="sources/Adafruit_GFX/Adafruit_GFX.cpp" path="Adafruit_GFX/Adafruit_GFX.cpp" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM" path="" type="2"/>
+    <File name="sources/mbed-nz32st1l/common/CallChain.cpp" path="mbed-nz32st1l/common/CallChain.cpp" type="1"/>
+    <File name="headers/SX1276Lib_modtronix/enums/enums.h" path="SX1276Lib_modtronix/enums/enums.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_cryp.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_cryp.h" type="1"/>
+    <File name="headers/main.h" path="main.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_wwdg.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_wwdg.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_usart.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_usart.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/serial_api.c" path="mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/serial_api.c" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_pcd_ex.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_pcd_ex.c" type="1"/>
+    <File name="sources/SX1276Lib_modtronix/radio" path="" type="2"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_smartcard.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_smartcard.c" type="1"/>
+    <File name="headers" path="" type="2"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_nor.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_nor.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_i2s.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_i2s.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/retarget.cpp" path="mbed-nz32st1l/common/retarget.cpp" type="1"/>
+    <File name="headers/mbed-nz32st1l/hal/pinmap.h" path="mbed-nz32st1l/hal/pinmap.h" type="1"/>
+    <File name="sources/SX1276Lib_modtronix/sx1276/sx1276-inAir.cpp" path="SX1276Lib_modtronix/sx1276/sx1276-inAir.cpp" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_rtc.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_rtc.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/platform.h" path="mbed-nz32st1l/api/platform.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/FileLike.h" path="mbed-nz32st1l/api/FileLike.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/SPI.cpp" path="mbed-nz32st1l/common/SPI.cpp" type="1"/>
+    <File name="headers/mbed-nz32st1l/hal/port_api.h" path="mbed-nz32st1l/hal/port_api.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/Timeout.cpp" path="mbed-nz32st1l/common/Timeout.cpp" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/core_caInstr.h" path="mbed-nz32st1l/targets/cmsis/core_caInstr.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_tim_ex.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_tim_ex.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/DigitalInOut.h" path="mbed-nz32st1l/api/DigitalInOut.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/hal/us_ticker_api.h" path="mbed-nz32st1l/hal/us_ticker_api.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM" path="" type="2"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/core_ca9.h" path="mbed-nz32st1l/targets/cmsis/core_ca9.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/hal/pwmout_api.h" path="mbed-nz32st1l/hal/pwmout_api.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_opamp_ex.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_opamp_ex.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/hal/spi_api.h" path="mbed-nz32st1l/hal/spi_api.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/gpio_irq_api.c" path="mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/gpio_irq_api.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/hal/analogout_api.h" path="mbed-nz32st1l/hal/analogout_api.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/TARGET_NZ32ST1L/cmsis.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/TARGET_NZ32ST1L/cmsis.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_uart.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_uart.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_spi.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_spi.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_dac_ex.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_dac_ex.c" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/pinmap_common.c" path="mbed-nz32st1l/common/pinmap_common.c" type="1"/>
+    <File name="sources/mbed-nz32st1l" path="" type="2"/>
+    <File name="headers/mbed-nz32st1l/api/FilePath.h" path="mbed-nz32st1l/api/FilePath.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/hal/ethernet_api.h" path="mbed-nz32st1l/hal/ethernet_api.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/gpio_object.h" path="mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/gpio_object.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/BusIn.h" path="mbed-nz32st1l/api/BusIn.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/analogout_api.c" path="mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/analogout_api.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_ll_sdmmc.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_ll_sdmmc.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_i2c.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_i2c.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_opamp.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_opamp.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/InterruptIn.cpp" path="mbed-nz32st1l/common/InterruptIn.cpp" type="1"/>
+    <File name="headers/SX1276Lib_modtronix/enums" path="" type="2"/>
+    <File name="headers/mbed-nz32st1l/targets/hal/TARGET_STM" path="" type="2"/>
+    <File name="sources/Adafruit_GFX/Adafruit_SSD1306.h" path="Adafruit_GFX/Adafruit_SSD1306.h" type="1"/>
+    <File name="headers/SX1276Lib_modtronix/SX1276LibConfig.h" path="SX1276Lib_modtronix/SX1276LibConfig.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/PortOut.h" path="mbed-nz32st1l/api/PortOut.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/hal/serial_api.h" path="mbed-nz32st1l/hal/serial_api.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/core_cm0.h" path="mbed-nz32st1l/targets/cmsis/core_cm0.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/pinmap.c" path="mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/pinmap.c" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/error.c" path="mbed-nz32st1l/common/error.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_dma.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_dma.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_flash.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_flash.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/core_cmFunc.h" path="mbed-nz32st1l/targets/cmsis/core_cmFunc.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_lcd.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_lcd.c" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/sleep.c" path="mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/sleep.c" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_adc.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_adc.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/Timer.h" path="mbed-nz32st1l/api/Timer.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/FileLike.cpp" path="mbed-nz32st1l/common/FileLike.cpp" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/InterruptIn.h" path="mbed-nz32st1l/api/InterruptIn.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/AnalogOut.h" path="mbed-nz32st1l/api/AnalogOut.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/SPISlave.h" path="mbed-nz32st1l/api/SPISlave.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_conf.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_conf.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/PeripheralNames.h" path="mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/PeripheralNames.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/TimerEvent.h" path="mbed-nz32st1l/api/TimerEvent.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/TARGET_NZ32ST1L" path="" type="2"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/TARGET_NZ32ST1L/hal_tick.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/TARGET_NZ32ST1L/hal_tick.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/TARGET_NZ32ST1L/stm32l1xx.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/TARGET_NZ32ST1L/stm32l1xx.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_rcc_ex.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_rcc_ex.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_sd.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_sd.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/semihost_api.c" path="mbed-nz32st1l/common/semihost_api.c" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/I2C.cpp" path="mbed-nz32st1l/common/I2C.cpp" type="1"/>
+    <File name="headers/SX1276Lib_modtronix/registers/sx1276Regs-Fsk.h" path="SX1276Lib_modtronix/registers/sx1276Regs-Fsk.h" type="1"/>
+    <File name="sources/SX1276Lib_modtronix/sx1276/sx1276.cpp" path="SX1276Lib_modtronix/sx1276/sx1276.cpp" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/PortNames.h" path="mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/PortNames.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_gpio.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_gpio.c" type="1"/>
+    <File name="headers/SX1276Lib_modtronix/sx1276" path="" type="2"/>
+    <File name="headers/mbed-nz32st1l/api/DigitalIn.h" path="mbed-nz32st1l/api/DigitalIn.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/BusInOut.cpp" path="mbed-nz32st1l/common/BusInOut.cpp" type="1"/>
+    <File name="sources/SX1276Lib_modtronix/radio/radio.cpp" path="SX1276Lib_modtronix/radio/radio.cpp" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/BusInOut.h" path="mbed-nz32st1l/api/BusInOut.h" type="1"/>
+    <File name="sources/Adafruit_GFX/Adafruit_GFX.h" path="Adafruit_GFX/Adafruit_GFX.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_crc.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_crc.c" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/rtc_api.c" path="mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/rtc_api.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/hal/gpio_irq_api.h" path="mbed-nz32st1l/hal/gpio_irq_api.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal.c" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_opamp_ex.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_opamp_ex.c" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/analogin_api.c" path="mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/analogin_api.c" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/us_ticker_api.c" path="mbed-nz32st1l/common/us_ticker_api.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/toolchain.h" path="mbed-nz32st1l/api/toolchain.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_crc.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_crc.h" type="1"/>
+    <File name="headers/SX1276Lib_modtronix/radio" path="" type="2"/>
+    <File name="sources/Adafruit_GFX/glcdfont.h" path="Adafruit_GFX/glcdfont.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis" path="" type="2"/>
+    <File name="sources/mbed-nz32st1l/common/SPISlave.cpp" path="mbed-nz32st1l/common/SPISlave.cpp" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/core_cm3.h" path="mbed-nz32st1l/targets/cmsis/core_cm3.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/SerialBase.cpp" path="mbed-nz32st1l/common/SerialBase.cpp" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_flash_ex.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_flash_ex.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_ll_fsmc.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_ll_fsmc.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/TARGET_NZ32ST1L/stm32l151xc.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/TARGET_NZ32ST1L/stm32l151xc.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/mbed_error.h" path="mbed-nz32st1l/api/mbed_error.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_rcc_ex.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_rcc_ex.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/hal/analogin_api.h" path="mbed-nz32st1l/hal/analogin_api.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/TARGET_NZ32ST1L/cmsis_nvic.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/TARGET_NZ32ST1L/cmsis_nvic.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/DirHandle.h" path="mbed-nz32st1l/api/DirHandle.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/hal/rtc_api.h" path="mbed-nz32st1l/hal/rtc_api.h" type="1"/>
+    <File name="headers/SX1276Lib_modtronix/sx1276/sx1276.h" path="SX1276Lib_modtronix/sx1276/sx1276.h" type="1"/>
+    <File name="headers/SX1276Lib_modtronix" path="" type="2"/>
+    <File name="sources" path="" type="2"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_flash_ramfunc.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_flash_ramfunc.c" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_opamp.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_opamp.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_i2c.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_i2c.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_rtc_ex.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_rtc_ex.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/PeripheralPins.h" path="mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/PeripheralPins.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_adc_ex.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_adc_ex.c" type="1"/>
+    <File name="sources/main.cpp" path="main.cpp" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/core_cm0plus.h" path="mbed-nz32st1l/targets/cmsis/core_cm0plus.h" type="1"/>
+    <File name="headers/SX1276Lib_modtronix/registers" path="" type="2"/>
+    <File name="sources/mbed-nz32st1l/common/LocalFileSystem.cpp" path="mbed-nz32st1l/common/LocalFileSystem.cpp" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/TARGET_NZ32ST1L/hal_tick.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/TARGET_NZ32ST1L/hal_tick.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_def.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_def.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_flash.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_flash.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_dac_ex.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_dac_ex.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_pwr.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_pwr.c" type="1"/>
+    <File name="headers/SX1276Lib_modtronix/debug" path="" type="2"/>
+    <File name="sources/mbed-nz32st1l/common/exit.c" path="mbed-nz32st1l/common/exit.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_pcd_ex.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_pcd_ex.h" type="1"/>
+    <File name="sources/Adafruit_GFX/Adafruit_GFX_Config.h" path="Adafruit_GFX/Adafruit_GFX_Config.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/Ticker.cpp" path="mbed-nz32st1l/common/Ticker.cpp" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_tim.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_tim.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/CAN.h" path="mbed-nz32st1l/api/CAN.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_rtc.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_rtc.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/hal" path="" type="2"/>
+    <File name="sources/Adafruit_GFX/Adafruit_SSD1306.cpp" path="Adafruit_GFX/Adafruit_SSD1306.cpp" type="1"/>
+    <File name="sources/im4oled.cpp" path="im4oled.cpp" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/BusOut.h" path="mbed-nz32st1l/api/BusOut.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/TARGET_NZ32ST1L" path="" type="2"/>
+    <File name="headers/mbed-nz32st1l/api/PwmOut.h" path="mbed-nz32st1l/api/PwmOut.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/gpio_api.c" path="mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/gpio_api.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/mbed.h" path="mbed-nz32st1l/api/mbed.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_dma.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_dma.c" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_i2s.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_i2s.c" type="1"/>
+    <File name="headers/SX1276Lib_modtronix/typedefs" path="" type="2"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_comp_ex.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_comp_ex.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/TARGET_NZ32ST1L/TOOLCHAIN_GCC_ARM" path="" type="2"/>
+    <File name="headers/mbed-nz32st1l/api/CallChain.h" path="mbed-nz32st1l/api/CallChain.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_uart.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_uart.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_cortex.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_cortex.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L" path="" type="2"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/core_ca_mmu.h" path="mbed-nz32st1l/targets/cmsis/core_ca_mmu.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_adc.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_adc.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/LocalFileSystem.h" path="mbed-nz32st1l/api/LocalFileSystem.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_spi.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_spi.c" type="1"/>
+    <File name="sources/SX1276Lib_modtronix" path="" type="2"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_cortex.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_cortex.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L" path="" type="2"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_cryp_ex.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_cryp_ex.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_cryp.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_cryp.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/FileSystemLike.h" path="mbed-nz32st1l/api/FileSystemLike.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_sram.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_sram.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/Timer.cpp" path="mbed-nz32st1l/common/Timer.cpp" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/hal" path="" type="2"/>
+    <File name="sources/mbed-nz32st1l/common/Serial.cpp" path="mbed-nz32st1l/common/Serial.cpp" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/core_cm4.h" path="mbed-nz32st1l/targets/cmsis/core_cm4.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/hal" path="" type="2"/>
+    <File name="sources/mbed-nz32st1l/targets" path="" type="2"/>
+    <File name="sources/mbed-nz32st1l/common/gpio.c" path="mbed-nz32st1l/common/gpio.c" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_sd.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_sd.c" type="1"/>
+    <File name="headers/SX1276Lib_modtronix/sx1276/sx1276-inAir.h" path="SX1276Lib_modtronix/sx1276/sx1276-inAir.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/hal/sleep_api.h" path="mbed-nz32st1l/hal/sleep_api.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/InterruptManager.cpp" path="mbed-nz32st1l/common/InterruptManager.cpp" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/FileBase.cpp" path="mbed-nz32st1l/common/FileBase.cpp" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_rcc.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_rcc.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/SerialBase.h" path="mbed-nz32st1l/api/SerialBase.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/FilePath.cpp" path="mbed-nz32st1l/common/FilePath.cpp" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/Serial.h" path="mbed-nz32st1l/api/Serial.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/semihost_api.h" path="mbed-nz32st1l/api/semihost_api.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/PinNames.h" path="mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/PinNames.h" type="1"/>
+    <File name="headers/mbed-nz32st1l" path="" type="2"/>
+    <File name="sources/mbed-nz32st1l/common/BusOut.cpp" path="mbed-nz32st1l/common/BusOut.cpp" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets" path="" type="2"/>
+    <File name="headers/SX1276Lib_modtronix/debug/myDebug.h" path="SX1276Lib_modtronix/debug/myDebug.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/PortIn.h" path="mbed-nz32st1l/api/PortIn.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/mbed_interface.h" path="mbed-nz32st1l/api/mbed_interface.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_sram.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_sram.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/core_cmInstr.h" path="mbed-nz32st1l/targets/cmsis/core_cmInstr.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_gpio.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_gpio.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/RawSerial.cpp" path="mbed-nz32st1l/common/RawSerial.cpp" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/Timeout.h" path="mbed-nz32st1l/api/Timeout.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_tim_ex.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_tim_ex.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/hal/can_api.h" path="mbed-nz32st1l/hal/can_api.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/AnalogIn.h" path="mbed-nz32st1l/api/AnalogIn.h" type="1"/>
+    <File name="headers/SX1276Lib_modtronix/typedefs/typedefs.h" path="SX1276Lib_modtronix/typedefs/typedefs.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/wait_api.c" path="mbed-nz32st1l/common/wait_api.c" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_pcd.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_pcd.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/TARGET_NZ32ST1L/cmsis_nvic.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/TARGET_NZ32ST1L/cmsis_nvic.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/common" path="" type="2"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_lcd.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_lcd.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_wwdg.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_wwdg.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/rtc_time.c" path="mbed-nz32st1l/common/rtc_time.c" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/FunctionPointer.cpp" path="mbed-nz32st1l/common/FunctionPointer.cpp" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_flash_ramfunc.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_flash_ramfunc.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1" path="" type="2"/>
+    <File name="sources/mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/mbed_overrides.c" path="mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/mbed_overrides.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_dma_ex.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_dma_ex.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/BusIn.cpp" path="mbed-nz32st1l/common/BusIn.cpp" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/mbed_debug.h" path="mbed-nz32st1l/api/mbed_debug.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_pwr.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_pwr.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/core_caFunc.h" path="mbed-nz32st1l/targets/cmsis/core_caFunc.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/hal/gpio_api.h" path="mbed-nz32st1l/hal/gpio_api.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_cryp_ex.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_cryp_ex.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/I2C.h" path="mbed-nz32st1l/api/I2C.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/mbed_interface.c" path="mbed-nz32st1l/common/mbed_interface.c" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_pwr_ex.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_pwr_ex.c" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_iwdg.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_iwdg.c" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/TARGET_NZ32ST1L/system_stm32l1xx.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/TARGET_NZ32ST1L/system_stm32l1xx.c" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/hal/TARGET_STM" path="" type="2"/>
+    <File name="headers/mbed-nz32st1l/api/RawSerial.h" path="mbed-nz32st1l/api/RawSerial.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/wait_api.h" path="mbed-nz32st1l/api/wait_api.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/hal/i2c_api.h" path="mbed-nz32st1l/hal/i2c_api.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/core_cm4_simd.h" path="mbed-nz32st1l/targets/cmsis/core_cm4_simd.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_dac.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_dac.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_flash_ex.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_flash_ex.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_irda.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_irda.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/Ticker.h" path="mbed-nz32st1l/api/Ticker.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/TARGET_NZ32ST1L/TOOLCHAIN_GCC_ARM/startup_stm32l151xc.s" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/TARGET_NZ32ST1L/TOOLCHAIN_GCC_ARM/startup_stm32l151xc.s" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/FileBase.h" path="mbed-nz32st1l/api/FileBase.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_gpio_ex.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_gpio_ex.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/SPI.h" path="mbed-nz32st1l/api/SPI.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/InterruptManager.h" path="mbed-nz32st1l/api/InterruptManager.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_irda.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_irda.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/mbed_assert.h" path="mbed-nz32st1l/api/mbed_assert.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/Stream.cpp" path="mbed-nz32st1l/common/Stream.cpp" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_iwdg.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_iwdg.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/device.h" path="mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/device.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/Stream.h" path="mbed-nz32st1l/api/Stream.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/I2CSlave.h" path="mbed-nz32st1l/api/I2CSlave.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_spi_ex.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_spi_ex.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/board.c" path="mbed-nz32st1l/common/board.c" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_dac.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_dac.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/rtc_time.h" path="mbed-nz32st1l/api/rtc_time.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_pwr_ex.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_pwr_ex.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/can_helper.h" path="mbed-nz32st1l/api/can_helper.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_comp.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_comp.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_nor.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_nor.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_ll_sdmmc.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_ll_sdmmc.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/PortInOut.h" path="mbed-nz32st1l/api/PortInOut.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/I2CSlave.cpp" path="mbed-nz32st1l/common/I2CSlave.cpp" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/Ethernet.h" path="mbed-nz32st1l/api/Ethernet.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis" path="" type="2"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_rcc.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_rcc.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_smartcard.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_smartcard.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/FunctionPointer.h" path="mbed-nz32st1l/api/FunctionPointer.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/spi_api.c" path="mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/spi_api.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/TARGET_NZ32ST1L/system_stm32l1xx.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/TARGET_NZ32ST1L/system_stm32l1xx.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/TimerEvent.cpp" path="mbed-nz32st1l/common/TimerEvent.cpp" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/CAN.cpp" path="mbed-nz32st1l/common/CAN.cpp" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/PeripheralPins.c" path="mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/PeripheralPins.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1" path="" type="2"/>
+    <File name="sources/mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/i2c_api.c" path="mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/i2c_api.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/api" path="" type="2"/>
+    <File name="headers/SX1276Lib_modtronix/registers/sx1276Regs-LoRa.h" path="SX1276Lib_modtronix/registers/sx1276Regs-LoRa.h" type="1"/>
+    <File name="sources/Adafruit_GFX" path="" type="2"/>
+    <File name="sources/mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/port_api.c" path="mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/port_api.c" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/assert.c" path="mbed-nz32st1l/common/assert.c" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_ll_fsmc.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_ll_fsmc.c" type="1"/>
+    <File name="headers/mbed-nz32st1l/api/FileHandle.h" path="mbed-nz32st1l/api/FileHandle.h" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_rtc_ex.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_rtc_ex.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_usart.c" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_usart.c" type="1"/>
+    <File name="sources/im4oled.h" path="im4oled.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/us_ticker.c" path="mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/us_ticker.c" type="1"/>
+    <File name="sources/mbed-nz32st1l/common/FileSystemLike.cpp" path="mbed-nz32st1l/common/FileSystemLike.cpp" type="1"/>
+    <File name="sources/SX1276Lib_modtronix/sx1276" path="" type="2"/>
+    <File name="sources/mbed-nz32st1l/common/Ethernet.cpp" path="mbed-nz32st1l/common/Ethernet.cpp" type="1"/>
+    <File name="headers/mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_pcd.h" path="mbed-nz32st1l/targets/cmsis/TARGET_STM/TARGET_STM32L1/stm32l1xx_hal_pcd.h" type="1"/>
+    <File name="headers/SX1276Lib_modtronix/radio/radio.h" path="SX1276Lib_modtronix/radio/radio.h" type="1"/>
+    <File name="sources/mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/pwmout_api.c" path="mbed-nz32st1l/targets/hal/TARGET_STM/TARGET_NZ32ST1L/pwmout_api.c" type="1"/>
+  </Files>
+  <Bookmarks/>
+</Project>

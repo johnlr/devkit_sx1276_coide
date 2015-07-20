@@ -1,0 +1,68 @@
+<project name="MyProject" default="backupAll" basedir=".">
+
+  <!-- set global properties for this build -->
+  <property name="dest.dir" value="./dist"/>
+  <property name="src.dir" value="."/>
+
+  <!-- what files to include and exclude from the src dir -->
+  <patternset id="src.patternset" >
+  
+  <exclude name="**/readme_MODTRONIX.txt"/>
+  <exclude name="**/build_dist.bat"/>
+  <exclude name="**/build_dist.xml"/>
+  <exclude name="**/modtronix_build.xml"/>
+  <exclude name="**/*.cogui"/>
+  <exclude name="**/*.comarker"/>
+  <exclude name="**/*.bak"/>
+  <exclude name="**/*.cod"/>
+  <exclude name="**/*.cof"/>
+  <exclude name="**/*.err"/>
+  <exclude name="**/*gitignore*"/>
+  <exclude name="**/*.log"/>
+  <exclude name="**/*.lst"/>
+  <exclude name="**/*.map"/>
+  <exclude name="**/*.obj"/>
+  <exclude name="**/*.o"/>
+  <exclude name="**/*.zip"/>
+  <exclude name="**/*CS_/**"/>
+  <exclude name="**/.hg/**"/>
+  <exclude name="**/cache/**"/>
+  <exclude name="**/*- copy*/**"/>
+  <exclude name="**/doxygen/html*/**"/>
+  <exclude name="**/doxygen/latex/**"/>
+  <exclude name="**/eclipse*/**"/>
+  <exclude name="**/backup*/**"/>
+  <exclude name="**/*nodis*/**"/>
+  <exclude name="**/*nobak*/**"/>
+	<exclude name="**/temp*/**"/>
+	<exclude name="**/tmp*/**"/>
+	<exclude name="**/old/**"/>
+	<exclude name="**/*_old/**"/>
+	<exclude name="**/*_bak/**"/>
+  </patternset>
+
+  <target name="init">
+    <!-- Create the time stamp -->
+    <tstamp>
+      <format property="DATE" pattern="yyyyMMdd"/>
+    </tstamp>
+  </target>
+
+  <!-- Backup all -->
+  <target name="backupAll" depends="init">
+    <antcall target="zipAll"/>
+  </target>
+
+  <!-- Zip folder -->
+  <target name="zipAll" depends="init">
+    <!-- Create folder -->
+    <!-- <mkdir dir="${dest.dir}/${DATE}/prj/mbed"/> -->
+
+    <!-- Zip files -->
+    <zip zipfile="${dest.dir}/${DATE}_dist.zip">
+      <fileset dir="${src.dir}" casesensitive="no">
+        <patternset refid="src.patternset"/>
+      </fileset>
+    </zip>
+  </target>
+</project>
