@@ -111,7 +111,7 @@ void SX1276::RxChainCalibration( void )
     }
 
     // Sets a Frequency in HF band
-    settings.Channel=  868000000 ;
+    SetChannel( 868000000 );
 
     // Launch Rx chain calibration for HF band 
     Write ( REG_IMAGECAL, ( Read( REG_IMAGECAL ) & RF_IMAGECAL_IMAGECAL_MASK ) | RF_IMAGECAL_IMAGECAL_START );
